@@ -1,0 +1,5 @@
+# For Training
+python train_qalas.py --data_path /autofs/space/marduk_003/users/yohan/python_code/fastMRI/DATA/qalas --check_val_every_n_epoch 4 --num_sanity_val_steps 0
+
+# For Inference
+python inference_qalas_map.py --data_path /autofs/space/marduk_003/users/yohan/python_code/fastMRI/DATA/qalas/multicoil_test --state_dict_file qalas_log/checkpoints/epoch=1-step=1.ckpt --output_path qalas_log
