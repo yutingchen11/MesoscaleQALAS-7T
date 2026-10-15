@@ -3,6 +3,33 @@
 The baseline zero-shot reconstrcution code is forked from https://github.com/byaman14/ZS-SSL & https://github.com/yohan-jun/Zero-DeepSub
 ### Installation
 Dependencies are given in ` MZS-SSL-QALAS/environment_tf2.yml` and can be installed with``conda env create -f environment_tf2.yml``.
+### Reconstruction Pipeline
+
+#### 1. Preprocessing
+
+Run the following MATLAB script to prepare the raw data for zero-shot self-supervised reconstruction:
+
+```matlab
+prepare_data_for_QALAS_MZS_SSL_recon.m
+```
+
+#### 2. Training
+
+Run one of the following scripts to perform multi-contrast and multi-slice zero-shot self-supervised learning training:
+
+```bash
+python zs_ssl_train_muti_mask_batch_v10_ms.py
+```
+
+Before training, reconstruction hyperparameters can be adjusted in `parser_ops.py` under the corresponding reconstruction folder.
+#### 3. Inference
+
+Run one of the following notebooks to load the checkpoints saved during training and perform inference:
+
+```bash
+zs_ssl_inference_ms_qalas.ipynb
+```
+
 ## Parameter Estimation: SSL-UHF
 ### Method Overview
 
