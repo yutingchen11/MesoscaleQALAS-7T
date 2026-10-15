@@ -10,7 +10,7 @@ Dependencies are given in ` MZS-SSL-QALAS/environment_tf2.yml` and can be instal
 Run the following MATLAB script to prepare the raw data for zero-shot self-supervised reconstruction:
 
 ```matlab
-prepare_data_for_QALAS_MZS_SSL_recon.m
+prepare_data_for_qalas_MZS_SSL_recon.m
 ```
 
 #### 2. Training
